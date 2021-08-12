@@ -36,7 +36,7 @@ public class Shooting : MonoBehaviour
     {
         for (int i = 0; i < bulletCount; i++)
         {
-            Quaternion rotationAmount = Quaternion.Euler(30 * (i - 1), 0, 0);
+            Quaternion rotationAmount = Quaternion.Euler(0, 0, 30 * (i - 1));
             newRot = Firepoint.rotation * rotationAmount;
             
             GameObject b = Instantiate(bullet, Firepoint.position, newRot);
